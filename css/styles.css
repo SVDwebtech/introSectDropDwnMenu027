@@ -1,0 +1,241 @@
+/*
+0px			- 		600px:			mobile 		--> Mobile First Approach 
+											   	    (where normal styles apply)
+600px		- 		900px: 			tab-port 	-->	Tablet Portrait 
+900px		-		1200px:			tab-land	-->	Tablet Landscape
+1200px		-		1800px:			desk		-->	Desktop 
+1800px +							big-desk	-->	Big Desktop
+
+REMEMBER: 1em = 16px;
+$breakpoint argument choices
+	- tab-port and >	600 --> 900 	: min-width: 37.5em (600/16)
+	- tab-land and >	900 --> 1200	: min-width: 56.25em (900/16)
+	- desk and >		1200 --> 1800	: min-width: 75em (1200/16)
+	- big-desk and >    1800 +			: min-width: 112.5em (1800/16)
+
+ORDER: base + typography > general layout + grid > page layout > components
+
+*/
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-4.8rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(4.8rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes rotateAndMoveInRight {
+  0% {
+    opacity: 0;
+    transform: translateY(-12rem) translateX(15rem) scale(1) rotateY(45deg);
+  }
+  25% {
+    opacity: 0;
+  }
+  65% {
+    transform: scale(0.4) rotateY(140deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem) translateX(0rem) scale(1) rotateY(360deg);
+  }
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* 	1rem is equal to 10px */
+  /* 	because 10px / 10 is equal to 1rem */
+  /* 	therefore 30px is equal to 3rem */
+  /* 	the default font size of the browser is 16px */
+  /* 	10px / 16px *100 = 62.5% */
+  /* 	10px / 16px *100 = 62.5% */
+  font-size: 62.5%;
+}
+@media (min-width: 37.5em) {
+  html {
+    /* 	12px / 16px *100 = 75% */
+    font-size: 75%;
+  }
+}
+@media (min-width: 56.25em) {
+  html {
+    /* 	13px / 16px *100 = 81.25% */
+    font-size: 81.25%;
+  }
+}
+@media (min-width: 75em) {
+  html {
+    /* 	15px / 16px *100 = 93.75% */
+    font-size: 93.75%;
+  }
+}
+@media (min-width: 112.5em) {
+  html {
+    /* 	18px / 16px *100 = 112.5% */
+    font-size: 112.5%;
+  }
+}
+
+body {
+  /* This makes dealing with the sizes of elements much easier, 
+  	and generally eliminates a number of pitfalls you can stumble on
+  	 while laying out your content. */
+  /* The width and height properties include the content, padding, and border, 
+  	but do not include the margin.  Note that padding and border will be inside 
+  	of the box. */
+  box-sizing: border-box;
+}
+@media (min-width: 56.25em) {
+  body {
+    padding: 0 1rem 1rem 1rem;
+  }
+}
+
+body {
+  color: rgb(127, 6, 111);
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.header {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+.header__heading {
+  text-align: center;
+}
+.header .heading__primary--main {
+  font-size: 2.4rem;
+  font-weight: 900;
+}
+.header .heading__primary--subb {
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+.header__paragraph {
+  text-align: center;
+}
+
+.paragraph {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.u-center-text {
+  text-align: center;
+}
+
+.u-margin-bottom-xtrasmall {
+  margin-bottom: 0.5rem;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1rem;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 3rem;
+}
+
+.u-margin-bottom-large {
+  margin-bottom: 5rem;
+}
+
+.u-margin-bottom-xtralarge {
+  margin-bottom: 7rem;
+}
+
+.u-margin-top-xtrasmall {
+  margin-top: 0.5rem;
+}
+
+.u-margin-top-small {
+  margin-top: 1rem;
+}
+
+.u-margin-top-medium {
+  margin-top: 3rem;
+}
+
+.u-margin-top-large {
+  margin-top: 5rem;
+}
+
+.u-margin-top-xtralarge {
+  margin-top: 7rem;
+}
+
+.subsection-wrapper-header {
+  padding: 4rem 5rem 0rem 5rem;
+}
+
+.subsection-wrapper-about {
+  padding: 0 5rem 5rem 5rem;
+}
+
+.subsection-wrapper-contact {
+  padding: 0 5rem 5rem 5rem;
+}
+
+.btn, .btn:link, .btn:visited {
+  display: inline-block;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  outline: none;
+  padding: 0.3em 1.5em;
+  backface-visibility: hidden;
+  transition: box-shadow 0.2s, transform 0.2s, border 0.2s;
+}
+.btn--header {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 600;
+  background-color: transparent;
+  border-bottom: 2px solid rgb(177, 10, 10);
+  border-right: 2px solid rgb(177, 10, 10);
+  padding: 0.15em 1em;
+  margin: 2rem auto;
+}
+.btn--header:hover {
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.4);
+  transform: translateY(-0.2rem);
+}
+.btn--header:active, .btn--header:focus {
+  outline: none;
+  transform: translateY(0.2rem);
+  box-shadow: 0 0.5rem 2rem rgba(255, 255, 255, 0.3);
+}
+
+.btnClose, .btnClose:link, .btnClose:visited {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=styles.css.map */
