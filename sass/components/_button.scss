@@ -1,0 +1,53 @@
+.btn {
+	&,
+	&:link,
+	&:visited {
+		display: inline-block;
+
+		color: inherit;
+		text-align: center;
+		text-decoration: none;
+		border-radius: 5px;
+		outline: none;
+
+		padding: .3em 1.5em;
+
+		backface-visibility: hidden;
+		transition: box-shadow .2s, transform .2s, border .2s;
+	}
+
+	&--header {
+		display: block;
+		
+		//color: $color-font-brightRed;
+		font-size: 1.4rem;
+		font-weight: 600;
+		background-color: transparent;
+		//border: 2px solid $color-font-brightRed;
+		border-bottom: 2px solid rgb(177, 10, 10);
+		border-right: 2px solid rgb(177, 10, 10);
+		padding: .15em 1em;
+		margin: 2rem auto;
+
+		&:hover {
+			//border: 2px solid $color-font-brightRed;
+			box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .4);
+			transform: translateY(-.2rem);
+		}
+
+		&:active,
+		&:focus {
+			outline: none;
+			transform: translateY(.2rem);
+			box-shadow: 0 .5rem 2rem rgba(255, 255, 255, .3);
+		}
+	}
+}
+// times icons for close buttons
+.btnClose {
+	&,
+	&:link,
+	&:visited {
+		text-decoration: none;
+	}
+}

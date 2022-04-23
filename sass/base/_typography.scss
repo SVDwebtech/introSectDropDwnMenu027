@@ -1,0 +1,63 @@
+body {
+	color: $color-font-white;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	line-height: 1.6;
+}
+
+
+.header {
+
+	max-width: 40rem;
+	margin: 0 auto;
+
+	&__heading {
+		text-align: center;
+	}
+	
+	.heading__primary--main {
+		font-size: 2.4rem;
+		font-weight: 900;
+	}
+	.heading__primary--subb {
+		font-size: 1.9rem;
+		font-weight: 700;
+	}
+	&__paragraph {
+		text-align: center;
+	}
+}
+
+// topography of paragraph;
+.paragraph {
+	font-size: 1.2rem;
+	font-weight: 400;
+}
+
+// topography of navbar;
+.navbar {
+}
+
+// topography of hamburger menu;
+.hamburger {
+}
+
+// topography of buttons;
+.btn {
+}
+
+// topography of about-section;
+.header {
+}
+
+// topography of about-section;
+.about {
+}
+
+// topography of contact-section;
+.contact {
+}
+
+// topography of footer-section;
+.footer {
+}

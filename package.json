@@ -1,0 +1,14 @@
+{
+  "name": "introsectdropdwnmeny027",
+  "version": "1.0.0",
+  "description": "a simple intro section of website with dropdown menus",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss css/styles.css -w"
+  },
+  "author": "Schalk van Dyk",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.50.1"
+  }
+}
