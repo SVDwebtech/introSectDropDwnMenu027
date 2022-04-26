@@ -16,24 +16,37 @@
   </style>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="navbar__logo">
-      <img src="./images/logo.svg" alt="company logo in text: word snap">
-    </div>
-    <div class="navbar__menu">
-      <img src="./images/icon-menu.svg" alt="">
-    </div>
-  </nav>
-  <header>
-    <div class="header__image">
-      <img src="./images/image-hero-mobile.png" alt="funky hero image of man working on computer">
-    </div>
+  <!-- header -->
+  <header class="header">
+    
+    <!-- navbar -->
+    <nav class="header__navbar navbar">
+      <div class="navbar__logo">
+        <img src="./images/logo.svg" alt="company logo in text: word snap">
+      </div>
+      <div class="navbar__menu">
+        <img src="./images/icon-menu.svg" alt="">
+      </div>
+    </nav>
+    
+    <!-- hero image -->
+    <img class="header__image" src="./images/image-hero-mobile.png" alt="funky hero image of man working on computer">
+        
+    <!-- header heading -->
     <h1 class="header__heading">Make remote work</h1>
-    <p class="header__paragraph">Get your team in sync, no matter your <br>
-                                  location.  Streamline processes, create <br>
-                                  team rituals, and watch productivity soar.</p>
+    
+    <!-- header paragraph -->
+    <p class="header__paragraph">
+        Get your team in sync, no matter your <br>
+        location.  Streamline processes, create <br>
+        team rituals, and watch productivity soar.
+    </p>
+
+    <!-- header cta button -->
     <button class="btn header__cta-button">Learn more</button>
-    <div class="associations">
+    
+    <!-- associations
+    <div class="header__associations">
       <div class="databiz">
         <img src="./images/client-databiz.svg" alt="databiz logo">  
       </div>
@@ -46,8 +59,7 @@
       <div class="maker">
         <img src="./images/client-maker.svg" alt="maker logo">
       </div>
-
-    </div>
+    </div> -->
   </header>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
