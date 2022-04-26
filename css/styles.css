@@ -147,6 +147,12 @@ body {
   font-weight: 400;
 }
 
+.btn {
+  color: hsl(0deg, 0%, 98%);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
 .u-center-text {
   text-align: center;
 }
@@ -204,31 +210,23 @@ body {
 }
 
 .btn, .btn:link, .btn:visited {
-  display: inline-block;
-  color: inherit;
+  align-self: center;
   text-align: center;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 10px;
+  border: none;
   outline: none;
-  padding: 0.3em 1.5em;
-  backface-visibility: hidden;
-  transition: box-shadow 0.2s, transform 0.2s, border 0.2s;
+  padding: 0.7em 1.2em;
+  transition: all 0.2s;
 }
-.btn--header {
-  display: block;
-  font-size: 1.4rem;
-  font-weight: 600;
-  background-color: transparent;
-  border-bottom: 2px solid rgb(177, 10, 10);
-  border-right: 2px solid rgb(177, 10, 10);
-  padding: 0.15em 1em;
-  margin: 2rem auto;
+.btn__cta-button {
+  background-color: hsl(0deg, 0%, 8%);
 }
-.btn--header:hover {
+.btn__cta-button:hover {
   box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.4);
   transform: translateY(-0.2rem);
 }
-.btn--header:active, .btn--header:focus {
+.btn__cta-button:active, .btn__cta-button:focus {
   outline: none;
   transform: translateY(0.2rem);
   box-shadow: 0 0.5rem 2rem rgba(255, 255, 255, 0.3);
