@@ -2,3 +2,34 @@
 // HEADER
 /////////////////////////////////////////////////////////////////////
 
+.header {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 100%;
+    
+    &__navbar {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    &__associations {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        &--img {
+            width: 16%;
+            height: auto;
+            display: block;
+        }
+    }
+}

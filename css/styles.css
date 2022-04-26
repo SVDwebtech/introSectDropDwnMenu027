@@ -117,7 +117,7 @@ body {
 }
 
 body {
-  color: rgb(127, 6, 111);
+  color: hsl(0deg, 0%, 8%);
   font-family: "Lato", sans-serif;
   font-weight: 300;
   line-height: 1.6;
@@ -236,6 +236,37 @@ body {
 
 .btnClose, .btnClose:link, .btnClose:visited {
   text-decoration: none;
+}
+
+.header {
+  height: 100vh;
+  padding: 1rem 1rem 0 1rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+.header__navbar {
+  display: flex;
+  justify-content: space-around;
+}
+.header__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.header__associations {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.header__associations--img {
+  width: 16%;
+  height: auto;
+  display: block;
 }
 
 /*# sourceMappingURL=styles.css.map */
