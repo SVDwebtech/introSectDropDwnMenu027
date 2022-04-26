@@ -124,22 +124,11 @@ body {
 }
 
 .header {
-  max-width: 40rem;
-  margin: 0 auto;
+  text-align: center;
 }
 .header__heading {
-  text-align: center;
-}
-.header .heading__primary--main {
-  font-size: 2.4rem;
-  font-weight: 900;
-}
-.header .heading__primary--subb {
-  font-size: 1.9rem;
+  font-size: 3.2rem;
   font-weight: 700;
-}
-.header__paragraph {
-  text-align: center;
 }
 
 .paragraph {
@@ -238,8 +227,8 @@ body {
 }
 
 .header {
-  height: 95vh;
-  padding: 1rem 1rem 0 1rem;
+  height: 85vh;
+  padding: 2rem 1rem 0 1rem;
   margin-bottom: 1rem;
 }
 
@@ -251,7 +240,15 @@ body {
 }
 .header__navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__navbar--logo {
+  margin-left: 1.5rem;
+}
+.header__navbar--menu {
+  align-self: flex-start;
+  margin-right: 1.5rem;
 }
 .header__image {
   width: 100%;

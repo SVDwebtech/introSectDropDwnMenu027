@@ -12,7 +12,18 @@
     
     &__navbar {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        align-items: center;
+
+        &--logo {
+            margin-left: 1.5rem;
+        }
+        
+        &--menu {
+            align-self: flex-start;
+
+            margin-right: 1.5rem;
+        }
     }
 
     &__image {
