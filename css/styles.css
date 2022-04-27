@@ -127,20 +127,20 @@ body {
   text-align: center;
 }
 .header__heading {
-  font-size: 3.2rem;
-  font-weight: 700;
+  font-size: 3.45rem;
+  font-weight: 800;
 }
 
 .paragraph {
   color: hsl(0deg, 0%, 41%);
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-size: 1.7rem;
+  font-weight: 500;
 }
 
 .btn {
   color: hsl(0deg, 0%, 98%);
-  font-size: 1.4rem;
-  font-weight: 600;
+  font-size: 1.8rem;
+  font-weight: 500;
 }
 
 .u-center-text {
@@ -200,13 +200,14 @@ body {
 }
 
 .btn, .btn:link, .btn:visited {
+  font-family: inherit;
   align-self: center;
   text-align: center;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 15px;
   border: none;
   outline: none;
-  padding: 0.7em 1.2em;
+  padding: 0.9em 1.2em;
   transition: all 0.2s;
 }
 .btn__cta-button {
