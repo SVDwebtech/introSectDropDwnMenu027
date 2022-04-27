@@ -227,15 +227,15 @@ body {
 }
 
 .header {
-  height: 85vh;
+  min-height: 95vh;
   padding: 2rem 1rem 0 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .header {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
 }
 .header__navbar {
