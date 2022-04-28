@@ -223,17 +223,18 @@ body {
   margin-right: 1.5rem;
 }
 .header__image {
-  width: 37rem;
+  width: 100%;
   height: auto;
   display: block;
 }
 .header__associations {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 .header__associations--img {
-  width: 16%;
+  width: 20%;
   height: auto;
   display: block;
 }

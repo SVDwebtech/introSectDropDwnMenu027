@@ -32,18 +32,20 @@
     }
 
     &__image {
-        width: 37rem;
+        width: 100%;
         height: auto;
         display: block;
     }
 
     &__associations {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
 
+        width: 100%;
+
         &--img {
-            width: 16%;
+            width: 20%;
             height: auto;
             display: block;
         }
