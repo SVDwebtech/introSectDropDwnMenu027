@@ -45,6 +45,7 @@ html {
 }
 
 body {
+	position: relative;
 	/* This makes dealing with the sizes of elements much easier, 
 		and generally eliminates a number of pitfalls you can stumble on
 		 while laying out your content. */
@@ -57,4 +58,8 @@ body {
 	// padding for large screen sizes
 	padding: 0 1rem 1rem 1rem;
 	}
+}
+
+ul, li {
+	list-style: none;
 }

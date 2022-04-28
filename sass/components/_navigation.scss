@@ -5,5 +5,23 @@
 .navList {
 }
 // hamburger icon and hamburger menu styling;
-.hamburger {
+.hamburgerMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+ 
+    background-color: $color-almost-white;
+    
+    width: 60%;
+    height: 100vh;
+    padding: 2rem 2rem;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    &__icon {
+        align-self: flex-end;
+    }
 }

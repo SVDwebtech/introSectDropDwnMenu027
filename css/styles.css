@@ -102,6 +102,7 @@ html {
 }
 
 body {
+  position: relative;
   /* This makes dealing with the sizes of elements much easier, 
   	and generally eliminates a number of pitfalls you can stumble on
   	 while laying out your content. */
@@ -114,6 +115,10 @@ body {
   body {
     padding: 0 1rem 1rem 1rem;
   }
+}
+
+ul, li {
+  list-style: none;
 }
 
 body {
@@ -141,6 +146,12 @@ body {
   color: hsl(0deg, 0%, 98%);
   font-size: 1.8rem;
   font-weight: 500;
+}
+
+.hamburgerMenu__links {
+  color: hsl(0deg, 0%, 41%);
+  font-family: inherit;
+  font-size: 1.7rem;
 }
 
 .u-center-text {
@@ -193,6 +204,23 @@ body {
 
 .btnClose, .btnClose:link, .btnClose:visited {
   text-decoration: none;
+}
+
+.hamburgerMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: hsl(0deg, 0%, 98%);
+  width: 60%;
+  height: 100vh;
+  padding: 2rem 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.hamburgerMenu__icon {
+  align-self: flex-end;
 }
 
 .header {

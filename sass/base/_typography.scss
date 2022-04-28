@@ -32,3 +32,13 @@ body {
 	font-size: 1.8rem;
 	font-weight: 500;
 }
+
+.hamburgerMenu {
+
+	&__links {
+		color: $color-medium-gray;
+	font-family: inherit;
+	font-size: 1.7rem;
+	}
+	
+}
