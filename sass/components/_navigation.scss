@@ -1,9 +1,30 @@
-.navbar {
+.checkbox {
+    opacity: 0;
+    width: 32px;
+    height: 22px;
+
+    position: absolute;
+    top: -.20rem;
+    right: 1.5rem;
+
+    z-index: 1000;
 }
 
-// contains the actual navigation items --> about &contact;
-.navList {
+label {
+    display: none;
+
+    width: 100%;
+
+    position: absolute;
+    top: -2rem;
+    right: 0;
 }
+
+#click:checked + label {
+    display: block;
+
+}
+
 // hamburger icon and hamburger menu styling;
 .hamburgerMenu {
     display: flex;
@@ -11,17 +32,21 @@
     justify-content: flex-start;
     align-items: flex-start;
  
-    background-color: $color-almost-white;
+    background: linear-gradient(to right, rgba(0,0,0,.6) 40%, $color-almost-white 40%);
     
-    width: 60%;
+    width: 100%;
     height: 100vh;
-    padding: 2rem 2rem;
+    padding: 2rem 2rem 0rem 17rem ;
 
     position: absolute;
-    top: 0;
+    top: 10;
     right: 0;
 
     &__icon {
         align-self: flex-end;
+    }
+
+    &__links {
+    
     }
 }

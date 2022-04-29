@@ -152,6 +152,7 @@ body {
   color: hsl(0deg, 0%, 41%);
   font-family: inherit;
   font-size: 1.7rem;
+  text-align: left;
 }
 
 .u-center-text {
@@ -206,23 +207,44 @@ body {
   text-decoration: none;
 }
 
+.checkbox {
+  opacity: 0;
+  width: 32px;
+  height: 22px;
+  position: absolute;
+  top: -0.2rem;
+  right: 1.5rem;
+  z-index: 1000;
+}
+
+label {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: -2rem;
+  right: 0;
+}
+
+#click:checked + label {
+  display: block;
+}
+
 .hamburgerMenu {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  background-color: hsl(0deg, 0%, 98%);
-  width: 60%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 40%, hsl(0deg, 0%, 98%) 40%);
+  width: 100%;
   height: 100vh;
-  padding: 2rem 2rem;
+  padding: 2rem 2rem 0rem 17rem;
   position: absolute;
-  top: 0;
+  top: 10;
   right: 0;
 }
 .hamburgerMenu__icon {
   align-self: flex-end;
 }
-
 .header {
   min-height: 95vh;
   padding: 2rem 1rem 0 1rem;
@@ -242,6 +264,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  position: relative;
 }
 .header__navbar--logo {
   margin-left: 1.5rem;
