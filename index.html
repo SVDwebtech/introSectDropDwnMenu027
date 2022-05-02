@@ -20,27 +20,53 @@
   </style>
 </head>
 <body>
-  
   <!-- header -->
   <header class="header">
     <!-- navbar -->
     <nav class="header__navbar navbar u-margin-bottom-medium">
-      <!-- checkbox hack -->
-      <input class="checkbox" type="checkbox" id="click">
-      <label>
-        <!-- hamburger menu -->
-        <div class="hamburgerMenu">
-          <img class="hamburgerMenu__icon u-margin-bottom-medium" for="click" src="./images/icon-close-menu.svg" alt="close icon for menu">
-          <ul class="hamburgerMenu__list">
-            <li class="hamburgerMenu__links u-margin-bottom-small">Features</li>
-            <li class="hamburgerMenu__links u-margin-bottom-small">Company</li>
-            <li class="hamburgerMenu__links u-margin-bottom-small">Careers</li>
-            <li class="hamburgerMenu__links u-margin-bottom-small">About</li>
-          </ul>
-        </div>
-      </label>
+      <!-- hamburger menu -->
+      <div class="hamburgerMenu">
+        <img class="hamburgerMenu__icon u-margin-bottom-medium menuClose" for="click" src="./images/icon-close-menu.svg" alt="close icon for menu">
+        <ul class="hamburgerMenu__mainList">
+          <li class="hamburgerMenu__mainLinks u-margin-bottom-small">
+            <div class="hamburgerMenu__mainLinksHeading u-margin-bottom-small featuresLink">
+              Features 
+              <img class="hamburgerMenu__iconArrowDown featuresArrowDown" src="./images/icon-arrow-down.svg" alt="down arrow"></img> 
+              <img class="hamburgerMenu__iconArrowUp featuresArrowUp displayNone" src="./images/icon-arrow-up.svg" alt="up arrow"></img> 
+            </div>
+            <ul class="hamburgerMenu__subList featuresList">
+              <li class="hamburgerMenu__subLinks u-margin-bottom-small"> 
+                <img class="hamburgerMenu__subLinksIcon" src="./images/icon-todo.svg" alt="icon image of todo"> Todo List
+              </li>
+              <li class="hamburgerMenu__subLinks u-margin-bottom-small"> 
+                <img class="hamburgerMenu__subLinksIcon" src="./images/icon-calendar.svg" alt="icon image of calendar"> Calendar
+              </li>
+              <li class="hamburgerMenu__subLinks u-margin-bottom-small"> 
+                <img class="hamburgerMenu__subLinksIcon" src="./images/icon-reminders.svg" alt="icon image of reminders"> Reminders
+              </li>
+              <li class="hamburgerMenu__subLinks"> 
+                <img class="hamburgerMenu__subLinksIcon" src="./images/icon-planning.svg" alt="icon image of planning"> Planning
+              </li>
+            </ul>
+          </li>
+          <li class="hamburgerMenu__mainLinks u-margin-bottom-small">
+            <div class="hamburgerMenu__mainLinksHeading u-margin-bottom-small companyLink">
+              Company 
+              <img class="hamburgerMenu__iconArrowDown companyArrowDown" src="./images/icon-arrow-down.svg" alt="up arrow"></img> 
+              <img class="hamburgerMenu__iconArrowUp companyArrowUp displayNone" src="./images/icon-arrow-up.svg" alt="up arrow"></img> 
+            </div>
+            <ul class="hamburgerMenu__subList companyList">
+              <li class="hamburgerMenu__subLinks u-margin-bottom-small">History</li>
+              <li class="hamburgerMenu__subLinks u-margin-bottom-small">Our Team</li>
+              <li class="hamburgerMenu__subLinks">Blog</li>
+            </ul>  
+          </li>
+          <li class="hamburgerMenu__mainLinks u-margin-bottom-small">Careers</li>
+          <li class="hamburgerMenu__mainLinks u-margin-bottom-small">About</li>
+        </ul>
+      </div>
       <img class="header__navbar--logo navbar__logo" src="./images/logo.svg" alt="company logo in text: word snap">
-      <img class="header__navbar--menu navbar__menu" src="./images/icon-menu.svg" alt="">
+      <img class="header__navbar--menu navbar__menu menuOpen" src="./images/icon-menu.svg" alt="">
     </nav>
     <!-- hero image -->
     <img class="header__image u-margin-bottom-large" src="./images/image-hero-mobile.png" alt="funky hero image of man working on computer"> 
@@ -66,5 +92,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Schalk van Dyk</a>.
   </div>
+  <script src="index.js"></script>
 </body>
 </html>

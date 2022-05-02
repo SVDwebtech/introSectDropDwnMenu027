@@ -178,37 +178,6 @@ body {
   text-decoration: none;
 }
 
-.checkbox {
-  opacity: 0;
-  width: 32px;
-  height: 22px;
-  position: absolute;
-  top: -0.2rem;
-  right: 1.5rem;
-  z-index: 1000;
-}
-
-label {
-  width: 100%;
-  height: 120vh;
-  position: absolute;
-  top: -2rem;
-  right: 0;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: all 0.4s;
-}
-
-#click:checked + label {
-  transform: scaleX(1);
-  transition: all 1.6s;
-}
-
-#click:checked ~ .navbar__menu {
-  transform: scale(0);
-  transition: all 0.05s;
-}
-
 .hamburgerMenu {
   display: flex;
   flex-direction: column;
@@ -217,15 +186,85 @@ label {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 40%, hsl(0deg, 0%, 98%) 40%);
   width: 100%;
   height: 120vh;
-  padding: 2rem 2rem 0rem 17rem;
+  padding: 0rem 2rem 0rem 15rem;
   position: absolute;
-  top: 10;
+  top: -2rem;
   right: 0;
-  transition: all 0.6s;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: all 0.4s;
 }
 .hamburgerMenu__icon {
   align-self: flex-end;
+  margin-top: 2rem;
 }
+.hamburgerMenu__mainLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.hamburgerMenu__iconArrowUp {
+  display: inline-block;
+  margin-left: 1rem;
+}
+.hamburgerMenu__iconArrowDown {
+  display: inline-block;
+  margin-left: 1rem;
+}
+.hamburgerMenu__subLinks {
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+}
+.hamburgerMenu__subLinksIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+}
+
+.hamburgerMenuOpen {
+  transform: scaleX(1);
+  transition: all 1.5s;
+}
+
+.displayNone {
+  display: none;
+}
+
+.displayBlock {
+  display: block;
+}
+
+.featuresList {
+  display: none;
+  height: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: all 0.4s;
+}
+
+.listFeaturesDisplay {
+  display: block;
+  height: 100px;
+  transform: scaleY(1);
+  transition: all 0.4s;
+}
+
+.companyList {
+  display: none;
+  height: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: all 0.4s;
+}
+
+.listCompanyDisplay {
+  display: block;
+  height: 70px;
+  transform: scaleY(1);
+  transition: all 0.4s;
+}
+
 .header {
   min-height: 95vh;
   padding: 2rem 1rem 0 1rem;
@@ -253,7 +292,7 @@ label {
 .header__navbar--menu {
   align-self: flex-start;
   margin-right: 1.5rem;
-  transition: all 1.8s;
+  transition: all 1s;
 }
 .header__image {
   width: 100%;
@@ -270,6 +309,11 @@ label {
   width: 20%;
   height: auto;
   display: block;
+}
+
+.menuButtonDisplay {
+  transform: scale(0);
+  transition: all 0.4s;
 }
 
 /*# sourceMappingURL=styles.css.map */

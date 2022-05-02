@@ -1,39 +1,3 @@
-.checkbox {
-    opacity: 0;
-    width: 32px;
-    height: 22px;
-
-    position: absolute;
-    top: -.20rem;
-    right: 1.5rem;
-
-    z-index: 1000;
-}
-
-label {
-    width: 100%;
-    height: 120vh;
-    
-    position: absolute;
-    top: -2rem;
-    right: 0;
-    
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: all .4s;
-
-}
-
-#click:checked + label {
-    transform: scaleX(1); 
-    transition: all 1.6s;
-}
-
-#click:checked ~ .navbar__menu {
-    transform: scale(0);
-    transition: all .05s;
-}
-
 // hamburger icon and hamburger menu styling;
 .hamburgerMenu {
     display: flex;
@@ -45,19 +9,83 @@ label {
     
     width: 100%;
     height: 120vh;
-    padding: 2rem 2rem 0rem 17rem ;
+    padding: 0rem 2rem 0rem 15rem ;
 
     position: absolute;
-    top: 10;
+    top: -2rem;
     right: 0;
 
     &__icon {
         align-self: flex-end;
+        margin-top: 2rem;
     }
-
-    &__links {
-    
+    &__mainLinks {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
+    &__iconArrowUp {
+        display: inline-block;
+        margin-left: 1rem;
+    }
+    &__iconArrowDown {
+        display: inline-block;
+        margin-left: 1rem;
+    }
+    &__subLinks {
+        display: flex;
+        align-items: center;
+        margin-left: 2rem;
+    }
+    &__subLinksIcon {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 1rem;
+    }
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: all .4s;
+}
 
-    transition:all 0.6s;
+.hamburgerMenuOpen {
+    transform: scaleX(1);
+    transition: all 1.5s;
+}
+
+.displayNone {
+    display: none;
+}
+
+.displayBlock {
+    display: block;
+}
+
+.featuresList {
+    display: none;
+    height: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all .4s;
+}
+
+.listFeaturesDisplay {
+    display: block;
+    height: 100px;
+    transform: scaleY(1);
+    transition: all .4s;
+}
+
+.companyList {
+    display: none;
+    height: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all .4s;
+}
+
+.listCompanyDisplay {
+    display: block;
+    height: 70px;
+    transform: scaleY(1);
+    transition: all .4s;
 }
