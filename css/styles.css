@@ -193,6 +193,7 @@ body {
   transform: scaleX(0);
   transform-origin: right;
   transition: all 0.4s;
+  transition-timing-function: cubic-bezier(0.5, 0, 1, 1);
 }
 .hamburgerMenu__icon {
   align-self: flex-end;
@@ -224,7 +225,8 @@ body {
 
 .hamburgerMenuOpen {
   transform: scaleX(1);
-  transition: all 1.5s;
+  transition: all 0.6s;
+  transition-timing-function: cubic-bezier(0.9, 0, 1, 1);
 }
 
 .displayNone {
@@ -236,7 +238,6 @@ body {
 }
 
 .featuresList {
-  display: none;
   height: 0;
   transform: scaleY(0);
   transform-origin: top;
@@ -244,14 +245,13 @@ body {
 }
 
 .listFeaturesDisplay {
-  display: block;
-  height: 100px;
+  height: 10rem;
   transform: scaleY(1);
+  margin-top: 1rem;
   transition: all 0.4s;
 }
 
 .companyList {
-  display: none;
   height: 0;
   transform: scaleY(0);
   transform-origin: top;
@@ -259,9 +259,9 @@ body {
 }
 
 .listCompanyDisplay {
-  display: block;
-  height: 70px;
+  height: 7rem;
   transform: scaleY(1);
+  margin-top: 1rem;
   transition: all 0.4s;
 }
 
@@ -293,6 +293,7 @@ body {
   align-self: flex-start;
   margin-right: 1.5rem;
   transition: all 1s;
+  transition-timing-function: cubic-bezier(0.6, 0, 1, 1);
 }
 .header__image {
   width: 100%;
@@ -313,7 +314,8 @@ body {
 
 .menuButtonDisplay {
   transform: scale(0);
-  transition: all 0.4s;
+  transition: all 0.2s;
+  transition-timing-function: cubic-bezier(0.9, 0, 1, 1);
 }
 
 /*# sourceMappingURL=styles.css.map */

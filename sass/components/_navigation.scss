@@ -45,11 +45,13 @@
     transform: scaleX(0);
     transform-origin: right;
     transition: all .4s;
+    transition-timing-function: cubic-bezier(.5, 0, 1, 1);
 }
 
 .hamburgerMenuOpen {
     transform: scaleX(1);
-    transition: all 1.5s;
+    transition: all .6s;
+    transition-timing-function: cubic-bezier(.9, 0, 1, 1);
 }
 
 .displayNone {
@@ -61,7 +63,6 @@
 }
 
 .featuresList {
-    display: none;
     height: 0;
     transform: scaleY(0);
     transform-origin: top;
@@ -69,14 +70,14 @@
 }
 
 .listFeaturesDisplay {
-    display: block;
-    height: 100px;
+    height: 10rem;
     transform: scaleY(1);
+    margin-top: 1rem;
     transition: all .4s;
+
 }
 
 .companyList {
-    display: none;
     height: 0;
     transform: scaleY(0);
     transform-origin: top;
@@ -84,8 +85,8 @@
 }
 
 .listCompanyDisplay {
-    display: block;
-    height: 70px;
+    height: 7rem;
     transform: scaleY(1);
+    margin-top: 1rem;
     transition: all .4s;
 }

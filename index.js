@@ -25,14 +25,17 @@ let dropdown1 = true;
 featuresLink.addEventListener("click", function() {
 	if (dropdown1) {
 		featuresList.classList.toggle("displayBlock");
+
 		featuresArrowDown.classList.toggle("displayNone");
 		featuresArrowUp.classList.toggle("displayNone");
+
 		setTimeout(function() {
 			featuresList.classList.toggle("listFeaturesDisplay");
 		}, 20);
 	}
 	else {
 		featuresList.classList.toggle("listFeaturesDisplay");
+
 		featuresArrowDown.classList.toggle("displayNone");
 		featuresArrowUp.classList.toggle("displayNone");
 		setTimeout(function() {
