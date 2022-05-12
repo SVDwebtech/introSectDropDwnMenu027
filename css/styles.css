@@ -153,6 +153,10 @@ body {
   text-align: left;
 }
 
+.navbarMenu {
+  color: hsl(0deg, 0%, 41%);
+}
+
 .u-center-text {
   text-align: center;
 }
@@ -309,7 +313,6 @@ body {
   .navbarMenu {
     display: flex;
     justify-content: space-between;
-    background-color: aqua;
     width: 100%;
     margin-right: 1.5rem;
   }
@@ -317,14 +320,25 @@ body {
     display: flex;
     margin-left: 4rem;
   }
-  .navbarMenu__navlinks {
+  .navbarMenu__navigationLinks {
+    margin-top: 0.7rem;
     margin-right: 4rem;
   }
   .navbarMenu__login {
     display: flex;
   }
-  .navbarMenu__login .navlinks:nth-child(2) {
+  .navbarMenu__loginLinks:nth-child(1) {
+    margin-top: 0.7rem;
+  }
+  .navbarMenu__loginLinks:nth-child(2) {
     margin-left: 4rem;
+    border: 2px solid hsl(0deg, 0%, 41%);
+    border-radius: 15px;
+    padding: 0.45rem 1.3rem;
+  }
+  .navbarMenu__loginLinks:nth-child(2):hover {
+    color: hsl(0deg, 0%, 8%) !important;
+    border: 2px solid hsl(0deg, 0%, 8%);
   }
 }
 
