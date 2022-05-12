@@ -328,7 +328,11 @@ body {
     display: flex;
   }
   .navbarMenu__loginLinks:nth-child(1) {
+    color: hsl(0deg, 0%, 41%);
     margin-top: 0.7rem;
+  }
+  .navbarMenu__loginLinks:nth-child(1):hover {
+    color: hsl(0deg, 0%, 8%);
   }
   .navbarMenu__loginLinks:nth-child(2) {
     margin-left: 4rem;
@@ -337,7 +341,7 @@ body {
     padding: 0.45rem 1.3rem;
   }
   .navbarMenu__loginLinks:nth-child(2):hover {
-    color: hsl(0deg, 0%, 8%) !important;
+    color: hsl(0deg, 0%, 8%);
     border: 2px solid hsl(0deg, 0%, 8%);
   }
 }
