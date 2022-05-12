@@ -29,12 +29,14 @@
 
         &--logo {
             margin-left: 1.5rem;
+            margin-top: .6rem;
         }
         
         &--menu {
             align-self: flex-start;
             
             margin-right: 1.5rem;
+            margin-top: .6rem;
             
             transition: all 1s;
             transition-timing-function: cubic-bezier(.6, 0, 1, 1);

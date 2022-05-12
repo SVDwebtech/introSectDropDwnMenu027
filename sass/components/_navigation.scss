@@ -100,13 +100,28 @@
 
     @include respond(tab-land) {
         display: flex;
+        justify-content: space-between;
+        background-color: aqua;
+        width: 100%;
+        margin-right: 1.5rem;
+
 
         &__navigation {
             display: flex;
+            margin-left: 4rem;
+
+        }
+
+        &__navlinks {
+            margin-right: 4rem;
         }
 
         &__login {
             display: flex;
+            
+            .navlinks:nth-child(2){
+                margin-left: 4rem;
+            }
         }
     }
 }

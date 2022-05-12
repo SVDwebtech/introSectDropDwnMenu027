@@ -308,12 +308,23 @@ body {
 @media (min-width: 56.25em) {
   .navbarMenu {
     display: flex;
+    justify-content: space-between;
+    background-color: aqua;
+    width: 100%;
+    margin-right: 1.5rem;
   }
   .navbarMenu__navigation {
     display: flex;
+    margin-left: 4rem;
+  }
+  .navbarMenu__navlinks {
+    margin-right: 4rem;
   }
   .navbarMenu__login {
     display: flex;
+  }
+  .navbarMenu__login .navlinks:nth-child(2) {
+    margin-left: 4rem;
   }
 }
 
@@ -345,10 +356,12 @@ body {
 }
 .header__navbar--logo {
   margin-left: 1.5rem;
+  margin-top: 0.6rem;
 }
 .header__navbar--menu {
   align-self: flex-start;
   margin-right: 1.5rem;
+  margin-top: 0.6rem;
   transition: all 1s;
   transition-timing-function: cubic-bezier(0.6, 0, 1, 1);
 }
