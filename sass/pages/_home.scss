@@ -38,6 +38,10 @@
             
             transition: all 1s;
             transition-timing-function: cubic-bezier(.6, 0, 1, 1);
+
+            @include respond(tab-land) {
+                display: none;
+            }
         }
     }
 

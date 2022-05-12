@@ -227,6 +227,11 @@ body {
   transition: all 0.4s;
   transition-timing-function: cubic-bezier(0.5, 0, 1, 1);
 }
+@media (min-width: 56.25em) {
+  .hamburgerMenu {
+    display: none;
+  }
+}
 .hamburgerMenu__icon {
   align-self: flex-end;
   margin-top: 2rem;
@@ -331,6 +336,11 @@ body {
   margin-right: 1.5rem;
   transition: all 1s;
   transition-timing-function: cubic-bezier(0.6, 0, 1, 1);
+}
+@media (min-width: 56.25em) {
+  .header__navbar--menu {
+    display: none;
+  }
 }
 .header__hero {
   display: flex;

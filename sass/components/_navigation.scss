@@ -15,6 +15,10 @@
     top: -2rem;
     right: 0;
 
+    @include respond(tab-land) {
+        display: none;
+    }
+
     &__icon {
         align-self: flex-end;
         margin-top: 2rem;
