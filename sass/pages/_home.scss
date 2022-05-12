@@ -45,30 +45,60 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: center;
+        align-items: flex-end;
 
         width: 100%;
 
         @include respond(tab-land) {
             flex-direction: row;
             justify-content: space-evenly;
-            align-items: center;
-
-            width: 100%;
-            height: 85vh;
+            align-items: flex-end;
         }
     }
 
     &__imageSection {
         @include respond(tab-land) {
-            width: 45%;
+            width: 33%;
             order: 1;
         }
     }
 
     &__contentSection {
         @include respond(tab-land) {
-            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+            width: 36%;
+        }
+    }
+
+    &__heading {
+        .breakLargeScreen {
+            display: none;
+
+            @include respond(tab-land) {
+                display: inline;
+            }
+        }
+    }
+
+    &__paragraph {
+        .breakSmallScreen {
+            display: inline;
+
+            @include respond(tab-land) {
+                display: none;
+            }
+        }
+
+        .breakLargeScreen {
+            display: none;
+
+            @include respond(tab-land) {
+                display: inline;
+            }
         }
     }
 
@@ -89,18 +119,27 @@
             display: none;
 
             @include respond(tab-land) {
-                width: 80%;
                 display: block;
+
+                width: 100%;
+
+                margin-bottom: 0;
+
+
             }
         }
     }
 
     &__associations {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
 
         width: 100%;
+
+        @include respond(tab-land) {
+			width: 90%;
+		}
 
         &--img {
             width: 20%;
@@ -108,7 +147,7 @@
             display: block;
 
             @include respond(tab-land) {
-			    width: 10%;
+			    width: 20%;
 		    }
         }
     }

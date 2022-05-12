@@ -2,8 +2,8 @@
 	&,
 	&:link,
 	&:visited {
+		display: inline-block;
 		font-family: inherit;
-		align-self: center;
 		text-align: center;
 		text-decoration: none;
 		border-radius: 15px;
@@ -13,6 +13,10 @@
 		padding: .9em 1.2em;
 
 		transition: all .2s;
+
+		@include respond(tab-land) {
+			margin-bottom: 7rem !important;
+		}
 	}
 
 	&__cta-button {
