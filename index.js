@@ -9,6 +9,14 @@ const featuresArrowDown = document.querySelector(".featuresArrowDown");
 const featuresArrowUp = document.querySelector(".featuresArrowUp");
 const companyArrowDown = document.querySelector(".companyArrowDown");
 const companyArrowUp = document.querySelector(".companyArrowUp");
+const featuresDesktopLink = document.querySelector(
+	".featuresDesktopDropdownLink"
+);
+const featuresDesktopList = document.querySelector(".featuresDesktopList");
+const companyDesktopLink = document.querySelector(
+	".companyDesktopDropdownLink"
+);
+const companyDesktopList = document.querySelector(".companyDesktopList");
 
 menuOpen.addEventListener("click", function() {
 	hamburgerMenu.classList.toggle("hamburgerMenuOpen");
@@ -45,6 +53,33 @@ featuresLink.addEventListener("click", function() {
 	dropdown1 = !dropdown1;
 });
 
+/////////////////////////////////////////////////////////////////
+// featuresDeskTopDropdownLink functionality
+/////////////////////////////////////////////////////////////////
+let desktopDropdown1 = true;
+featuresDesktopLink.addEventListener("click", function() {
+	if (desktopDropdown1) {
+		featuresDesktopList.classList.toggle("displayBlock");
+
+		featuresArrowDown.classList.toggle("displayNone");
+		featuresArrowUp.classList.toggle("displayNone");
+
+		setTimeout(function() {
+			featuresDesktopList.classList.toggle("listFeaturesDesktopDisplay");
+		}, 20);
+	}
+	else {
+		featuresDesktopList.classList.toggle("listFeaturesDesktopDisplay");
+
+		featuresArrowDown.classList.toggle("displayNone");
+		featuresArrowUp.classList.toggle("displayNone");
+		setTimeout(function() {
+			featuresDesktopList.classList.toggle("displayBlock");
+		}, 800);
+	}
+	desktopDropdown1 = !desktopDropdown1;
+});
+
 let dropdown2 = true;
 
 companyLink.addEventListener("click", function() {
@@ -65,4 +100,28 @@ companyLink.addEventListener("click", function() {
 		}, 800);
 	}
 	dropdown2 = !dropdown2;
+});
+
+/////////////////////////////////////////////////////////////////
+// featuresDeskTopDropdownLink functionality
+/////////////////////////////////////////////////////////////////
+let desktopDropdown2 = true;
+companyDesktopLink.addEventListener("click", function() {
+	if (desktopDropdown2) {
+		companyDesktopList.classList.toggle("displayBlock");
+		companyArrowDown.classList.toggle("displayNone");
+		companyArrowUp.classList.toggle("displayNone");
+		setTimeout(function() {
+			companyDesktopList.classList.toggle("listCompanyDesktopDisplay");
+		}, 20);
+	}
+	else {
+		companyDesktopList.classList.toggle("listCompanyDesktopDisplay");
+		companyArrowDown.classList.toggle("displayNone");
+		companyArrowUp.classList.toggle("displayNone");
+		setTimeout(function() {
+			companyDesktopList.classList.toggle("displayBlock");
+		}, 800);
+	}
+	desktopDropdown2 = !desktopDropdown2;
 });

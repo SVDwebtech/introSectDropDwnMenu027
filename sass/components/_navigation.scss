@@ -73,15 +73,35 @@
     transition: all .4s;
 }
 
+.featuresDesktopList {
+    height: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all .4s;
+}
+
 .listFeaturesDisplay {
     height: 10rem;
     transform: scaleY(1);
     margin-top: 1rem;
     transition: all .4s;
+}
 
+.listFeaturesDesktopDisplay {
+    height: 11.25rem;
+    transform: scaleY(1);
+    margin-top: 1rem;
+    transition: all .8s;
 }
 
 .companyList {
+    height: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all .4s;
+}
+
+.companyDesktopList {
     height: 0;
     transform: scaleY(0);
     transform-origin: top;
@@ -95,6 +115,13 @@
     transition: all .4s;
 }
 
+.listCompanyDesktopDisplay {
+    height: 8.5rem;
+    transform: scaleY(1);
+    margin-top: 1rem;
+    transition: all .6s;
+}
+
 .navbarMenu {
     display: none;
 
@@ -106,27 +133,91 @@
         
         margin-right: 1.5rem;
 
+        position: relative;
 
         &__navigation {
             display: flex;
-            margin-left: 4rem;
+            justify-content: flex-start;
+            
+            width: 60%;
 
+            margin-top: .7rem;
+            margin-left: 4rem;
         }
 
         &__navigationLinks {
-            margin-top: .7rem;
-            margin-right: 4rem;
+        
+            &--text {
+                //transition: font-weight .2s;
+            }
+
+            &--text:hover {
+                color: $color-almost-black;
+                font-weight: 700;
+            }
+        }
+
+        &__navigationLinks:not(:last-child) {
+            margin-right: 3rem;
+        }
+
+        &__positionFeatures {
+            position: relative;
+        }
+
+        &__positionCompany {
+            position: relative;
+        }
+
+        &__textContainer {
+            display: inline-block;
+            text-align: center;
+            width: 5rem;
+        }
+
+        &__featuresList {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            background-color: $color-almost-white;
+            border-radius: .5rem;
+            box-shadow: 0px 0px 25px rgba(0,0,0,.2);
+
+            padding: 1rem 2rem;
+
+            position: absolute;
+            top: 2rem;
+            right: 0;
+        }
+
+        &__companyList {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            background-color: $color-almost-white;
+            border-radius: .3rem;
+            box-shadow: 0px 0px 25px rgba(0,0,0,.2);
+
+            padding: 1rem 2rem;
+
+            position: absolute;
+            top: 2rem;
+            left: 0;
+        }
+
+        &__subLinks {
+            min-width: max-content;
         }
 
         &__login {
-            display: flex;
-            
+            display: flex; 
         }
 
         &__loginLinks:nth-child(1){
             color: $color-medium-gray;
             margin-top: .7rem;
-            
         }
 
         &__loginLinks:nth-child(1):hover {
@@ -134,7 +225,7 @@
         }
 
         &__loginLinks:nth-child(2){
-            margin-left: 4rem;
+            margin-left: 3rem;
             border: 2px solid $color-medium-gray;
             border-radius: 15px;
     

@@ -285,6 +285,13 @@ body {
   transition: all 0.4s;
 }
 
+.featuresDesktopList {
+  height: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: all 0.4s;
+}
+
 .listFeaturesDisplay {
   height: 10rem;
   transform: scaleY(1);
@@ -292,7 +299,21 @@ body {
   transition: all 0.4s;
 }
 
+.listFeaturesDesktopDisplay {
+  height: 11.25rem;
+  transform: scaleY(1);
+  margin-top: 1rem;
+  transition: all 0.8s;
+}
+
 .companyList {
+  height: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: all 0.4s;
+}
+
+.companyDesktopList {
   height: 0;
   transform: scaleY(0);
   transform-origin: top;
@@ -306,6 +327,13 @@ body {
   transition: all 0.4s;
 }
 
+.listCompanyDesktopDisplay {
+  height: 8.5rem;
+  transform: scaleY(1);
+  margin-top: 1rem;
+  transition: all 0.6s;
+}
+
 .navbarMenu {
   display: none;
 }
@@ -315,14 +343,59 @@ body {
     justify-content: space-between;
     width: 100%;
     margin-right: 1.5rem;
+    position: relative;
   }
   .navbarMenu__navigation {
     display: flex;
+    justify-content: flex-start;
+    width: 60%;
+    margin-top: 0.7rem;
     margin-left: 4rem;
   }
-  .navbarMenu__navigationLinks {
-    margin-top: 0.7rem;
-    margin-right: 4rem;
+  .navbarMenu__navigationLinks--text:hover {
+    color: hsl(0deg, 0%, 8%);
+    font-weight: 700;
+  }
+  .navbarMenu__navigationLinks:not(:last-child) {
+    margin-right: 3rem;
+  }
+  .navbarMenu__positionFeatures {
+    position: relative;
+  }
+  .navbarMenu__positionCompany {
+    position: relative;
+  }
+  .navbarMenu__textContainer {
+    display: inline-block;
+    text-align: center;
+    width: 5rem;
+  }
+  .navbarMenu__featuresList {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: hsl(0deg, 0%, 98%);
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    padding: 1rem 2rem;
+    position: absolute;
+    top: 2rem;
+    right: 0;
+  }
+  .navbarMenu__companyList {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: hsl(0deg, 0%, 98%);
+    border-radius: 0.3rem;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    padding: 1rem 2rem;
+    position: absolute;
+    top: 2rem;
+    left: 0;
+  }
+  .navbarMenu__subLinks {
+    min-width: max-content;
   }
   .navbarMenu__login {
     display: flex;
@@ -335,7 +408,7 @@ body {
     color: hsl(0deg, 0%, 8%);
   }
   .navbarMenu__loginLinks:nth-child(2) {
-    margin-left: 4rem;
+    margin-left: 3rem;
     border: 2px solid hsl(0deg, 0%, 41%);
     border-radius: 15px;
     padding: 0.45rem 1.3rem;

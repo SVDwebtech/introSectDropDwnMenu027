@@ -66,12 +66,62 @@
         </ul>
       </div>
       <img class="header__navbar--logo navbar__logo" src="./images/logo.svg" alt="company logo in text: word snap">
+      <!-- navbarMenu -->
       <div class="navbarMenu">
         <ul class="navbarMenu__navigation">
-          <li class="navbarMenu__navigationLinks">Features</li>
-          <li class="navbarMenu__navigationLinks">Company</li>
-          <li class="navbarMenu__navigationLinks">Careers</li>
-          <li class="navbarMenu__navigationLinks">About</li>
+          <li class="navbarMenu__navigationLinks navbarMenu__positionFeatures">
+            <span class="navbarMenu__navigationLinks--text featuresDesktopDropdownLink">
+              <span class="navbarMenu__textContainer">
+                Features
+              </span> 
+              <svg class="navbarMenu__iconArrowDown featuresArrowDown" width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/></svg>
+              <svg class="navbarMenu__iconArrowUp featuresArrowUp displayNone" width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" stroke-width="1.5" fill="none" d="m1 5 4-4 4 4"/></svg>
+            </span>
+            <ul class="navbarMenu__subList navbarMenu__featuresList displayNone featuresDesktopList">
+              <li class="navbarMenu__subLinks u-margin-bottom-small"> 
+                <img class="navbarMenu__subLinksIcon" src="./images/icon-todo.svg" alt="icon image of todo"> Todo List
+              </li>
+              <li class="navbarMenu__subLinks u-margin-bottom-small"> 
+                <img class="navbarMenu__subLinksIcon" src="./images/icon-calendar.svg" alt="icon image of calendar"> Calendar
+              </li>
+              <li class="navbarMenu__subLinks u-margin-bottom-small"> 
+                <img class="navbarMenu__subLinksIcon" src="./images/icon-reminders.svg" alt="icon image of reminders"> Reminders
+              </li>
+              <li class="navbarMenu__subLinks"> 
+                <img class="navbarMenu__subLinksIcon" src="./images/icon-planning.svg" alt="icon image of planning"> Planning
+              </li>
+            </ul>
+          </li>
+          <li class="navbarMenu__navigationLinks navbarMenu__positionCompany">
+            <span class="navbarMenu__navigationLinks--text companyDesktopDropdownLink">
+              <span class="navbarMenu__textContainer">
+                Company
+              </span>
+              <svg class="navbarMenu__iconArrowDown featuresArrowDown" width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/></svg>
+              <svg class="navbarMenu__iconArrowUp featuresArrowUp displayNone" width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" stroke-width="1.5" fill="none" d="m1 5 4-4 4 4"/></svg>
+            </span>
+            <ul class="navbarMenu__subList navbarMenu__companyList displayNone companyDesktopList">
+              <li class="navbarMenu__subLinks u-margin-bottom-small"> 
+                History
+              </li>
+              <li class="navbarMenu__subLinks u-margin-bottom-small"> 
+                Our Team
+              </li>
+              <li class="navbarMenu__subLinks"> 
+                Blog
+              </li>
+            </ul>
+          </li>
+          <li class="navbarMenu__navigationLinks">
+            <span class="navbarMenu__navigationLinks--text">
+              <span class="navbarMenu__textContainer">Careers</span>
+            </span>
+          </li>
+          <li class="navbarMenu__navigationLinks">
+            <span class="navbarMenu__navigationLinks--text">
+              <span class="navbarMenu__textContainer">About</span>
+            </span>
+          </li>
         </ul>
         <ul class="navbarMenu__login">
           <li class="navbarMenu__loginLinks">Login</li>
