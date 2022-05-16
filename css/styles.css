@@ -296,14 +296,14 @@ body {
   height: 10rem;
   transform: scaleY(1);
   margin-top: 1rem;
-  transition: all 0.4s;
+  transition: all 0.2s;
 }
 
 .listFeaturesDesktopDisplay {
   height: 11.25rem;
   transform: scaleY(1);
   margin-top: 1rem;
-  transition: all 0.8s;
+  transition: all 0.4s;
 }
 
 .companyList {
@@ -331,7 +331,12 @@ body {
   height: 8.5rem;
   transform: scaleY(1);
   margin-top: 1rem;
-  transition: all 0.6s;
+  transition: all 0.4s;
+}
+
+.highlightBlack {
+  color: hsl(0deg, 0%, 8%);
+  font-weight: 700;
 }
 
 .navbarMenu {
@@ -444,6 +449,11 @@ body {
   align-items: center;
   width: 100%;
   position: relative;
+}
+@media (min-width: 75em) {
+  .header__navbar {
+    margin-bottom: 5.5rem;
+  }
 }
 .header__navbar--logo {
   margin-left: 1.5rem;

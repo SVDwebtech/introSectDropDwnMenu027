@@ -3,7 +3,6 @@
 /////////////////////////////////////////////////////////////////////
 
 .header {
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -26,6 +25,10 @@
         width: 100%;
 
         position: relative;
+
+        @include respond(desk) {
+            margin-bottom:5.5rem;
+        }
 
         &--logo {
             margin-left: 1.5rem;

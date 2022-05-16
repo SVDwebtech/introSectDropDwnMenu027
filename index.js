@@ -9,6 +9,16 @@ const featuresArrowDown = document.querySelector(".featuresArrowDown");
 const featuresArrowUp = document.querySelector(".featuresArrowUp");
 const companyArrowDown = document.querySelector(".companyArrowDown");
 const companyArrowUp = document.querySelector(".companyArrowUp");
+const featuresDesktopArrowDown = document.querySelector(
+	".featuresDesktopArrowDown"
+);
+const featuresDesktopArrowUp = document.querySelector(
+	".featuresDesktopArrowUp"
+);
+const companyDesktopArrowDown = document.querySelector(
+	".companyDesktopArrowDown"
+);
+const companyDesktopArrowUp = document.querySelector(".companyDesktopArrowUp");
 const featuresDesktopLink = document.querySelector(
 	".featuresDesktopDropdownLink"
 );
@@ -17,6 +27,8 @@ const companyDesktopLink = document.querySelector(
 	".companyDesktopDropdownLink"
 );
 const companyDesktopList = document.querySelector(".companyDesktopList");
+const featuresText = document.querySelector(".featuresText");
+const companyText = document.querySelector(".companyText");
 
 menuOpen.addEventListener("click", function() {
 	hamburgerMenu.classList.toggle("hamburgerMenuOpen");
@@ -61,8 +73,10 @@ featuresDesktopLink.addEventListener("click", function() {
 	if (desktopDropdown1) {
 		featuresDesktopList.classList.toggle("displayBlock");
 
-		featuresArrowDown.classList.toggle("displayNone");
-		featuresArrowUp.classList.toggle("displayNone");
+		featuresDesktopArrowDown.classList.toggle("displayNone");
+		featuresDesktopArrowUp.classList.toggle("displayNone");
+		featuresDesktopArrowUp.classList.toggle("highlightBlack");
+		featuresText.classList.toggle("highlightBlack");
 
 		setTimeout(function() {
 			featuresDesktopList.classList.toggle("listFeaturesDesktopDisplay");
@@ -71,8 +85,10 @@ featuresDesktopLink.addEventListener("click", function() {
 	else {
 		featuresDesktopList.classList.toggle("listFeaturesDesktopDisplay");
 
-		featuresArrowDown.classList.toggle("displayNone");
-		featuresArrowUp.classList.toggle("displayNone");
+		featuresDesktopArrowDown.classList.toggle("displayNone");
+		featuresDesktopArrowUp.classList.toggle("displayNone");
+		featuresDesktopArrowUp.classList.toggle("highlightBlack");
+		featuresText.classList.toggle("highlightBlack");
 		setTimeout(function() {
 			featuresDesktopList.classList.toggle("displayBlock");
 		}, 800);
@@ -109,16 +125,20 @@ let desktopDropdown2 = true;
 companyDesktopLink.addEventListener("click", function() {
 	if (desktopDropdown2) {
 		companyDesktopList.classList.toggle("displayBlock");
-		companyArrowDown.classList.toggle("displayNone");
-		companyArrowUp.classList.toggle("displayNone");
+		companyDesktopArrowDown.classList.toggle("displayNone");
+		companyDesktopArrowUp.classList.toggle("displayNone");
+		companyDesktopArrowUp.classList.toggle("highlightBlack");
+		companyText.classList.toggle("highlightBlack");
 		setTimeout(function() {
 			companyDesktopList.classList.toggle("listCompanyDesktopDisplay");
 		}, 20);
 	}
 	else {
 		companyDesktopList.classList.toggle("listCompanyDesktopDisplay");
-		companyArrowDown.classList.toggle("displayNone");
-		companyArrowUp.classList.toggle("displayNone");
+		companyDesktopArrowDown.classList.toggle("displayNone");
+		companyDesktopArrowUp.classList.toggle("displayNone");
+		companyDesktopArrowUp.classList.toggle("highlightBlack");
+		companyText.classList.toggle("highlightBlack");
 		setTimeout(function() {
 			companyDesktopList.classList.toggle("displayBlock");
 		}, 800);
