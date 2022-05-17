@@ -20,11 +20,11 @@ body {
 		font-weight: 800;
 
 		@include respond(tab-land) {
-			font-size: clamp(4.3rem, 5vw, 5rem);
+			font-size: 5rem;
 			font-weight: 700;
 			line-height: 1;
 
-			margin-bottom: 3.5rem !important;
+			margin-bottom: 2.8rem !important;
 		}
 	}
 	
@@ -41,14 +41,14 @@ body {
 		font-size: clamp(1rem, 1.2vw, 1.1rem);
 		font-weight: 500;
 
-		margin-bottom: 4rem !important;
+		margin-bottom: 3.7rem !important;
 	}
 
 	@include respond(desk) {
 		font-size: 1.2rem;
 		font-weight: 500;
 
-		margin-bottom: 4rem !important;
+		margin-bottom: 3.7rem !important;
 	}
 }
 

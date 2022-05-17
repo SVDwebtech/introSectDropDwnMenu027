@@ -113,10 +113,10 @@ body {
 }
 @media (min-width: 56.25em) {
   .header__heading {
-    font-size: clamp(4.3rem, 5vw, 5rem);
+    font-size: 5rem;
     font-weight: 700;
     line-height: 1;
-    margin-bottom: 3.5rem !important;
+    margin-bottom: 2.8rem !important;
   }
 }
 
@@ -130,14 +130,14 @@ body {
     font-size: 1.1rem;
     font-size: clamp(1rem, 1.2vw, 1.1rem);
     font-weight: 500;
-    margin-bottom: 4rem !important;
+    margin-bottom: 3.7rem !important;
   }
 }
 @media (min-width: 75em) {
   .paragraph {
     font-size: 1.2rem;
     font-weight: 500;
-    margin-bottom: 4rem !important;
+    margin-bottom: 3.7rem !important;
   }
 }
 
@@ -202,7 +202,7 @@ body {
 }
 @media (min-width: 56.25em) {
   .btn, .btn:link, .btn:visited {
-    margin-bottom: 7rem !important;
+    margin-bottom: 6.7rem !important;
   }
 }
 .btn__cta-button {
@@ -444,7 +444,7 @@ body {
 }
 
 .header {
-  min-height: 95vh;
+  min-height: 97vh;
   padding: 2rem 1rem 0 1rem;
 }
 
@@ -471,7 +471,7 @@ body {
 }
 @media (min-width: 75em) {
   .header__navbar {
-    margin-bottom: 5.5rem;
+    margin-bottom: 4rem;
   }
 }
 .header__navbar--logo {
@@ -500,13 +500,14 @@ body {
 @media (min-width: 56.25em) {
   .header__hero {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: flex-end;
   }
 }
 @media (min-width: 56.25em) {
   .header__imageSection {
-    width: 33%;
+    width: 34%;
+    margin-left: 3rem;
     order: 1;
   }
 }
@@ -516,7 +517,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 36%;
+    width: 40%;
+    margin-right: 3rem;
   }
 }
 .header__heading .breakLargeScreen {
@@ -573,7 +575,7 @@ body {
 }
 @media (min-width: 56.25em) {
   .header__associations {
-    width: 90%;
+    width: 100%;
   }
 }
 .header__associations--img {
@@ -583,7 +585,19 @@ body {
 }
 @media (min-width: 56.25em) {
   .header__associations--img {
+    display: flex;
+    align-items: flex-end;
     width: 20%;
+  }
+}
+@media (min-width: 56.25em) {
+  .header__associations--img1 {
+    width: 8.5rem;
+  }
+}
+@media (min-width: 56.25em) {
+  .header__associations--img2 {
+    width: 5rem;
   }
 }
 
