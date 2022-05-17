@@ -43,6 +43,13 @@ body {
 
 		margin-bottom: 4rem !important;
 	}
+
+	@include respond(desk) {
+		font-size: 1.2rem;
+		font-weight: 500;
+
+		margin-bottom: 4rem !important;
+	}
 }
 
 // topography of buttons;
@@ -69,5 +76,6 @@ body {
 }
 
 .navbarMenu {
-	color: $color-medium-gray;	
+	color: $color-medium-gray;
+	font-size: .9rem;	
 }

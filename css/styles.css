@@ -133,6 +133,13 @@ body {
     margin-bottom: 4rem !important;
   }
 }
+@media (min-width: 75em) {
+  .paragraph {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 4rem !important;
+  }
+}
 
 .btn {
   color: hsl(0deg, 0%, 98%);
@@ -155,6 +162,7 @@ body {
 
 .navbarMenu {
   color: hsl(0deg, 0%, 41%);
+  font-size: 0.9rem;
 }
 
 .u-center-text {
@@ -381,10 +389,10 @@ body {
     justify-content: flex-start;
     background-color: hsl(0deg, 0%, 98%);
     border-radius: 0.5rem;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-    padding: 1rem 2rem;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.19);
+    padding: 1.5rem 1.7rem;
     position: absolute;
-    top: 2rem;
+    top: 1.5rem;
     right: 0;
   }
   .navbarMenu__companyList {
@@ -393,14 +401,19 @@ body {
     justify-content: flex-start;
     background-color: hsl(0deg, 0%, 98%);
     border-radius: 0.3rem;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-    padding: 1rem 2rem;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.19);
+    padding: 1.5rem 1.7rem;
     position: absolute;
-    top: 2rem;
+    top: 1.5rem;
     left: 0;
   }
   .navbarMenu__subLinks {
+    display: flex;
+    align-items: center;
     min-width: max-content;
+  }
+  .navbarMenu__subLinksIconDesktop {
+    margin-right: 1.2rem;
   }
   .navbarMenu__login {
     display: flex;
