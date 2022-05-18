@@ -113,7 +113,7 @@ body {
 }
 @media (min-width: 56.25em) {
   .header__heading {
-    font-size: 5rem;
+    font-size: clamp(3.9rem, 3vw, 200px);
     font-weight: 700;
     line-height: 1;
     margin-bottom: 2.8rem !important;
@@ -469,6 +469,11 @@ body {
   width: 100%;
   position: relative;
 }
+@media (min-width: 56.25em) {
+  .header__navbar {
+    margin-bottom: 4rem;
+  }
+}
 @media (min-width: 75em) {
   .header__navbar {
     margin-bottom: 4rem;
@@ -502,6 +507,11 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: flex-end;
+  }
+}
+@media (min-width: 112.5em) {
+  .header__hero {
+    max-width: 1600px;
   }
 }
 @media (min-width: 56.25em) {
