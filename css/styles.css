@@ -16,19 +16,6 @@ $breakpoint argument choices
 ORDER: base + typography > general layout + grid > page layout > components
 
 */
-@keyframes moveInFromRight {
-  0% {
-    opacity: 0;
-    transform: translateX(4.8rem);
-  }
-  80% {
-    transform: translateX(-1rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 *,
 *::after,
 *::before {
@@ -38,12 +25,6 @@ ORDER: base + typography > general layout + grid > page layout > components
 }
 
 html {
-  scroll-behavior: smooth;
-  /* 	1rem is equal to 10px */
-  /* 	because 10px / 10 is equal to 1rem */
-  /* 	therefore 30px is equal to 3rem */
-  /* 	the default font size of the browser is 16px */
-  /* 	10px / 16px *100 = 62.5% */
   /* 	10px / 16px *100 = 62.5% */
   font-size: 62.5%;
 }
@@ -74,12 +55,6 @@ html {
 
 body {
   position: relative;
-  /* This makes dealing with the sizes of elements much easier, 
-  	and generally eliminates a number of pitfalls you can stumble on
-  	 while laying out your content. */
-  /* The width and height properties include the content, padding, and border, 
-  	but do not include the margin.  Note that padding and border will be inside 
-  	of the box. */
   box-sizing: border-box;
 }
 @media (min-width: 56.25em) {
@@ -88,7 +63,7 @@ body {
   }
 }
 
-ul, li {
+li {
   list-style: none;
 }
 
@@ -109,64 +84,48 @@ body {
 }
 .header__heading {
   font-size: 3.45rem;
-  font-weight: 800;
+  font-weight: 700;
 }
 @media (min-width: 56.25em) {
   .header__heading {
     font-size: clamp(3.9rem, 3vw, 200px);
-    font-weight: 700;
     line-height: 1;
-    margin-bottom: 2.8rem !important;
   }
 }
 
 .paragraph {
   color: hsl(0deg, 0%, 41%);
   font-size: 1.7rem;
-  font-weight: 500;
 }
 @media (min-width: 56.25em) {
   .paragraph {
     font-size: 1.1rem;
-    font-size: clamp(1rem, 1.2vw, 1.1rem);
-    font-weight: 500;
-    margin-bottom: 3.7rem !important;
   }
 }
 @media (min-width: 75em) {
   .paragraph {
     font-size: 1.2rem;
-    font-weight: 500;
-    margin-bottom: 3.7rem !important;
   }
 }
 
 .btn {
   color: hsl(0deg, 0%, 98%);
   font-size: 1.8rem;
-  font-weight: 500;
+}
+@media (min-width: 37.5em) {
+  .btn {
+    font-size: 1.5rem;
+  }
 }
 @media (min-width: 56.25em) {
   .btn {
     font-size: 1.2rem;
-    font-weight: 500;
   }
-}
-
-.hamburgerMenu__links {
-  color: hsl(0deg, 0%, 41%);
-  font-family: inherit;
-  font-size: 1.7rem;
-  text-align: left;
 }
 
 .navbarMenu {
   color: hsl(0deg, 0%, 41%);
   font-size: 0.9rem;
-}
-
-.u-center-text {
-  text-align: center;
 }
 
 .u-margin-bottom-xtrasmall {
@@ -190,36 +149,26 @@ body {
 }
 
 .btn, .btn:link, .btn:visited {
-  display: inline-block;
-  font-family: inherit;
-  text-align: center;
   text-decoration: none;
   border-radius: 15px;
-  border: none;
   outline: none;
+  width: 160px;
   padding: 0.9em 1.2em;
-  transition: all 0.2s;
+  transition: all 0.1s;
 }
 @media (min-width: 56.25em) {
   .btn, .btn:link, .btn:visited {
-    margin-bottom: 6.7rem !important;
+    margin-bottom: 6.7rem;
   }
 }
 .btn__cta-button {
   background-color: hsl(0deg, 0%, 8%);
 }
 .btn__cta-button:hover {
-  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.4);
-  transform: translateY(-0.2rem);
-}
-.btn__cta-button:active, .btn__cta-button:focus {
-  outline: none;
-  transform: translateY(0.2rem);
-  box-shadow: 0 0.5rem 2rem rgba(255, 255, 255, 0.3);
-}
-
-.btnClose, .btnClose:link, .btnClose:visited {
-  text-decoration: none;
+  color: hsl(0deg, 0%, 8%);
+  font-weight: 700;
+  background-color: hsl(0deg, 0%, 98%);
+  border: solid 2px hsl(0deg, 0%, 8%);
 }
 
 .hamburgerMenu {
@@ -366,6 +315,7 @@ body {
     margin-left: 4rem;
   }
   .navbarMenu__navigationLinks--text:hover {
+    cursor: pointer;
     color: hsl(0deg, 0%, 8%);
     font-weight: 700;
   }
@@ -425,6 +375,7 @@ body {
     margin-top: 0.7rem;
   }
   .navbarMenu__loginLinks:nth-child(1):hover {
+    cursor: pointer;
     color: hsl(0deg, 0%, 8%);
     font-weight: 700;
   }
@@ -437,6 +388,7 @@ body {
     margin-left: 3rem;
   }
   .navbarMenu__loginLinks:nth-child(2):hover {
+    cursor: pointer;
     color: hsl(0deg, 0%, 8%);
     font-weight: 700;
     border: 2px solid hsl(0deg, 0%, 8%);
@@ -539,6 +491,11 @@ body {
     display: inline;
   }
 }
+@media (min-width: 56.25em) {
+  .header__heading {
+    margin-bottom: 2.8rem !important;
+  }
+}
 .header__paragraph .breakSmallScreen {
   display: inline;
 }
@@ -553,6 +510,11 @@ body {
 @media (min-width: 56.25em) {
   .header__paragraph .breakLargeScreen {
     display: inline;
+  }
+}
+@media (min-width: 56.25em) {
+  .header__paragraph {
+    margin-bottom: 3.7rem !important;
   }
 }
 .header__image {

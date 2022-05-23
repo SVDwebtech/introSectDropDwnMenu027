@@ -9,113 +9,62 @@ const featuresArrowDown = document.querySelector(".featuresArrowDown");
 const featuresArrowUp = document.querySelector(".featuresArrowUp");
 const companyArrowDown = document.querySelector(".companyArrowDown");
 const companyArrowUp = document.querySelector(".companyArrowUp");
-const featuresDesktopArrowDown = document.querySelector(
-	".featuresDesktopArrowDown"
-);
-const featuresDesktopArrowUp = document.querySelector(
-	".featuresDesktopArrowUp"
-);
-const companyDesktopArrowDown = document.querySelector(
-	".companyDesktopArrowDown"
-);
+const featuresDesktopArrowDown = document.querySelector(".featuresDesktopArrowDown");
+const featuresDesktopArrowUp = document.querySelector(".featuresDesktopArrowUp");
+const companyDesktopArrowDown = document.querySelector(".companyDesktopArrowDown");
 const companyDesktopArrowUp = document.querySelector(".companyDesktopArrowUp");
-const featuresDesktopLink = document.querySelector(
-	".featuresDesktopDropdownLink"
-);
+const featuresDesktopLink = document.querySelector(".featuresDesktopDropdownLink");
 const featuresDesktopList = document.querySelector(".featuresDesktopList");
-const companyDesktopLink = document.querySelector(
-	".companyDesktopDropdownLink"
-);
+const companyDesktopLink = document.querySelector(".companyDesktopDropdownLink");
 const companyDesktopList = document.querySelector(".companyDesktopList");
 const featuresText = document.querySelector(".featuresText");
 const companyText = document.querySelector(".companyText");
 
 menuOpen.addEventListener("click", function() {
-	hamburgerMenu.classList.toggle("hamburgerMenuOpen");
-	menuOpen.classList.toggle("menuButtonDisplay");
+	toggleHamburgerBtns();
 });
 
 menuClose.addEventListener("click", function() {
-	hamburgerMenu.classList.toggle("hamburgerMenuOpen");
-	menuOpen.classList.toggle("menuButtonDisplay");
+	toggleHamburgerBtns();
 });
-
+/////////////////////////////////////////////////////////////////
+// hamburgerDropdownMenu functionality
+/////////////////////////////////////////////////////////////////
 let dropdown1 = true;
-
 featuresLink.addEventListener("click", function() {
 	if (dropdown1) {
-		featuresList.classList.toggle("displayBlock");
-
-		featuresArrowDown.classList.toggle("displayNone");
-		featuresArrowUp.classList.toggle("displayNone");
-
-		setTimeout(function() {
-			featuresList.classList.toggle("listFeaturesDisplay");
-		}, 20);
+		dropdownMenuFunctionality("features", "displayBlock", "displayNone", "listFeaturesDisplay", 20);
 	}
 	else {
-		featuresList.classList.toggle("listFeaturesDisplay");
-
-		featuresArrowDown.classList.toggle("displayNone");
-		featuresArrowUp.classList.toggle("displayNone");
-		setTimeout(function() {
-			featuresList.classList.toggle("displayBlock");
-		}, 800);
+		dropdownMenuFunctionality("features", "listFeaturesDisplay", "displayNone", "displayBlock", 800);
 	}
 	dropdown1 = !dropdown1;
-});
-
-/////////////////////////////////////////////////////////////////
-// featuresDeskTopDropdownLink functionality
-/////////////////////////////////////////////////////////////////
-let desktopDropdown1 = true;
-featuresDesktopLink.addEventListener("click", function() {
-	if (desktopDropdown1) {
-		featuresDesktopList.classList.toggle("displayBlock");
-
-		featuresDesktopArrowDown.classList.toggle("displayNone");
-		featuresDesktopArrowUp.classList.toggle("displayNone");
-		featuresDesktopArrowUp.classList.toggle("highlightBlack");
-		featuresText.classList.toggle("highlightBlack");
-
-		setTimeout(function() {
-			featuresDesktopList.classList.toggle("listFeaturesDesktopDisplay");
-		}, 20);
-	}
-	else {
-		featuresDesktopList.classList.toggle("listFeaturesDesktopDisplay");
-
-		featuresDesktopArrowDown.classList.toggle("displayNone");
-		featuresDesktopArrowUp.classList.toggle("displayNone");
-		featuresDesktopArrowUp.classList.toggle("highlightBlack");
-		featuresText.classList.toggle("highlightBlack");
-		setTimeout(function() {
-			featuresDesktopList.classList.toggle("displayBlock");
-		}, 800);
-	}
-	desktopDropdown1 = !desktopDropdown1;
 });
 
 let dropdown2 = true;
 
 companyLink.addEventListener("click", function() {
 	if (dropdown2) {
-		companyList.classList.toggle("displayBlock");
-		companyArrowDown.classList.toggle("displayNone");
-		companyArrowUp.classList.toggle("displayNone");
-		setTimeout(function() {
-			companyList.classList.toggle("listCompanyDisplay");
-		}, 20);
+		dropdownMenuFunctionality("company", "displayBlock", "displayNone", "listCompanyDisplay", 20);
 	}
 	else {
-		companyList.classList.toggle("listCompanyDisplay");
-		companyArrowDown.classList.toggle("displayNone");
-		companyArrowUp.classList.toggle("displayNone");
-		setTimeout(function() {
-			companyList.classList.toggle("displayBlock");
-		}, 800);
+		dropdownMenuFunctionality("company", "listCompanyDisplay", "displayNone", "displayBlock", 800);
 	}
 	dropdown2 = !dropdown2;
+});
+
+/////////////////////////////////////////////////////////////////
+// DeskTopDropdownMenu functionality
+/////////////////////////////////////////////////////////////////
+let desktopDropdown1 = true;
+featuresDesktopLink.addEventListener("click", function() {
+	if (desktopDropdown1) {
+		dropdownDesktopMenuFunctionality("features", "displayBlock", "displayNone", "highlightBlack", "listFeaturesDesktopDisplay", 20);
+	}
+	else {
+		dropdownDesktopMenuFunctionality("features", "listFeaturesDesktopDisplay", "displayNone", "highlightBlack", "displayBlock", 800);
+	}
+	desktopDropdown1 = !desktopDropdown1;
 });
 
 /////////////////////////////////////////////////////////////////
@@ -124,24 +73,67 @@ companyLink.addEventListener("click", function() {
 let desktopDropdown2 = true;
 companyDesktopLink.addEventListener("click", function() {
 	if (desktopDropdown2) {
-		companyDesktopList.classList.toggle("displayBlock");
-		companyDesktopArrowDown.classList.toggle("displayNone");
-		companyDesktopArrowUp.classList.toggle("displayNone");
-		companyDesktopArrowUp.classList.toggle("highlightBlack");
-		companyText.classList.toggle("highlightBlack");
-		setTimeout(function() {
-			companyDesktopList.classList.toggle("listCompanyDesktopDisplay");
-		}, 20);
+		dropdownDesktopMenuFunctionality("company", "displayBlock", "displayNone", "highlightBlack", "listCompanyDesktopDisplay", 20);
 	}
 	else {
-		companyDesktopList.classList.toggle("listCompanyDesktopDisplay");
-		companyDesktopArrowDown.classList.toggle("displayNone");
-		companyDesktopArrowUp.classList.toggle("displayNone");
-		companyDesktopArrowUp.classList.toggle("highlightBlack");
-		companyText.classList.toggle("highlightBlack");
-		setTimeout(function() {
-			companyDesktopList.classList.toggle("displayBlock");
-		}, 800);
+		dropdownDesktopMenuFunctionality("company", "listCompanyDesktopDisplay", "displayNone", "highlightBlack", "displayBlock", 800);
 	}
 	desktopDropdown2 = !desktopDropdown2;
 });
+
+//////////////////////////////////////////////////////////////////////////
+// app functions
+//////////////////////////////////////////////////////////////////////////
+function toggleHamburgerBtns() {
+	hamburgerMenu.classList.toggle("hamburgerMenuOpen");
+	menuOpen.classList.toggle("menuButtonDisplay");
+}
+
+function dropdownMenuFunctionality(whichMenu, a, b, c, d, e) {
+	if (whichMenu === "features") {
+		featuresList.classList.toggle(a);
+
+		featuresArrowDown.classList.toggle(b);
+		featuresArrowUp.classList.toggle(b);
+
+		setTimeout(function() {
+			featuresList.classList.toggle(c);
+		}, d);
+	}
+	else {
+		companyList.classList.toggle(a);
+
+		companyArrowDown.classList.toggle(b);
+		companyArrowUp.classList.toggle(b);
+
+		setTimeout(function() {
+			companyList.classList.toggle(c);
+		}, d);
+	}
+}
+
+function dropdownDesktopMenuFunctionality(whichMenu, a, b, c, d, e) {
+	if (whichMenu === "features") {
+		featuresDesktopList.classList.toggle(a);
+
+		featuresDesktopArrowDown.classList.toggle(b);
+		featuresDesktopArrowUp.classList.toggle(b);
+		featuresDesktopArrowUp.classList.toggle(c);
+		featuresText.classList.toggle(c);
+
+		setTimeout(function() {
+			featuresDesktopList.classList.toggle(d);
+		}, e);
+	}
+	else {
+		companyDesktopList.classList.toggle(a);
+
+		companyDesktopArrowDown.classList.toggle(b);
+		companyDesktopArrowUp.classList.toggle(b);
+		companyDesktopArrowUp.classList.toggle(c);
+		companyText.classList.toggle(c);
+		setTimeout(function() {
+			companyDesktopList.classList.toggle(d);
+		}, e);
+	}
+}

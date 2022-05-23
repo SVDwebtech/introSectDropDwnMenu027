@@ -157,6 +157,7 @@
             }
 
             &--text:hover {
+                cursor:pointer;
                 color: $color-almost-black;
                 font-weight: 700;
             }
@@ -236,6 +237,7 @@
         }
 
         &__loginLinks:nth-child(1):hover {
+            cursor:pointer;
             color: $color-almost-black;
             font-weight: 700;
         }
@@ -252,6 +254,7 @@
         }
 
         &__loginLinks:nth-child(2):hover {
+            cursor:pointer;
             color: $color-almost-black;
             font-weight: 700;
             border: 2px solid $color-almost-black;

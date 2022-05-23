@@ -101,6 +101,10 @@
                 display: inline;
             }
         }
+
+        @include respond(tab-land) {
+            margin-bottom: 2.8rem !important;
+        }
     }
 
     &__paragraph {
@@ -118,6 +122,10 @@
             @include respond(tab-land) {
                 display: inline;
             }
+        }
+
+        @include respond(tab-land) {
+            margin-bottom: 3.7rem !important;
         }
     }
 

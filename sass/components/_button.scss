@@ -2,45 +2,27 @@
 	&,
 	&:link,
 	&:visited {
-		display: inline-block;
-		font-family: inherit;
-		text-align: center;
 		text-decoration: none;
 		border-radius: 15px;
-		border: none;
 		outline: none;
 
+		width: 160px;
 		padding: .9em 1.2em;
 
-		transition: all .2s;
+		transition: all .1s;
 
 		@include respond(tab-land) {
-			margin-bottom: 6.7rem !important;
+			margin-bottom: 6.7rem;
 		}
 	}
 
 	&__cta-button {
 		background-color: $color-almost-black;
-
 		&:hover {
-			box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .4);
-			transform: translateY(-.2rem);
+			color: $color-almost-black;
+			font-weight: 700;
+			background-color: $color-almost-white;
+			border: solid 2px $color-almost-black;
 		}
-
-		&:active,
-		&:focus {
-			outline: none;
-			transform: translateY(.2rem);
-			box-shadow: 0 .5rem 2rem rgba(255, 255, 255, .3);
-		}
-	}
-}
-
-// times icons for close buttons
-.btnClose {
-	&,
-	&:link,
-	&:visited {
-		text-decoration: none;
 	}
 }

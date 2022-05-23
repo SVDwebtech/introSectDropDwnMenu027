@@ -7,15 +7,9 @@
 	box-sizing: inherit;
 }
 
+//responsive text
 html {
-	// smoothes automatic scroll when you click on a navlink
-	scroll-behavior: smooth;
-	/* 	1rem is equal to 10px */
-	/* 	because 10px / 10 is equal to 1rem */
-	/* 	therefore 30px is equal to 3rem */
-	/* 	the default font size of the browser is 16px */
-	/* 	10px / 16px *100 = 62.5% */
-
+	
 	/* 	10px / 16px *100 = 62.5% */
 	font-size: 62.5%; // 1.4rem = 14px
 
@@ -46,20 +40,13 @@ html {
 
 body {
 	position: relative;
-	/* This makes dealing with the sizes of elements much easier, 
-		and generally eliminates a number of pitfalls you can stumble on
-		 while laying out your content. */
-	/* The width and height properties include the content, padding, and border, 
-		but do not include the margin.  Note that padding and border will be inside 
-		of the box. */
 	box-sizing: border-box;
 
 	@include respond(tab-land) {
-	// padding for large screen sizes
 	padding: 0 1rem 1rem 1rem;
 	}
 }
 
-ul, li {
+li {
 	list-style: none;
 }
