@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/SVDwebtech/introSectDropDwnMenu027)
-- Live Site URL: [Add live site URL here](https://svdwebtech.github.io/introSectDropDwnMenu027/)
+- Solution URL: [Link](https://www.frontendmentor.io/solutions/intro-section-with-dropdown-navigation-d-_qiJ8IZR)
+- Live Site URL: [Link](https://svdwebtech.github.io/introSectDropDwnMenu027/)
 
 ## My process
 
